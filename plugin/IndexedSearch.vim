@@ -1,4 +1,8 @@
 let g:indexed_search_colors=0
+"
+" This is a minor fork of the original, modified to center matches in 
+" the window and open folds if necessary. <bobroski@gmail.com>
+"
 " File:         IndexedSearch.vim
 " Author:       Yakov Lerner <iler.ml@gmail.com>
 " URL:          http://www.vim.org/scripts/script.php?script_id=1682
@@ -86,8 +90,8 @@ command! ShowSearchIndex :call s:ShowCurrentSearchIndex(1,'')
 "                @/ and direction is restored at return from function
 "                We must have op invocation at the toplevel of mapping even though this
 "                makes mappings longer.
-nnoremap <silent>n :let v:errmsg=''<cr>:silent! norm! n<cr>:call <SID>ShowCurrentSearchIndex(0,'!')<cr>
-nnoremap <silent>N :let v:errmsg=''<cr>:silent! norm! N<cr>:call <SID>ShowCurrentSearchIndex(0,'!')<cr>
+nnoremap <silent>n :let v:errmsg=''<cr>:silent! norm! nzzzv<cr>:call <SID>ShowCurrentSearchIndex(0,'!')<cr>
+nnoremap <silent>N :let v:errmsg=''<cr>:silent! norm! Nzzzv<cr>:call <SID>ShowCurrentSearchIndex(0,'!')<cr>
 nnoremap <silent>* :let v:errmsg=''<cr>:silent! norm! *<cr>:call <SID>ShowCurrentSearchIndex(0,'!')<cr>
 nnoremap <silent># :let v:errmsg=''<cr>:silent! norm! #<cr>:call <SID>ShowCurrentSearchIndex(0,'!')<cr>
 
