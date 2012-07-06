@@ -1,6 +1,7 @@
 # IndexedSearch.vim by [Yakov Lerner](http://www.vim.org/account/profile.php?user_id=2342)
 
-Not by me. I just put it here to have it on GitHub in a [Pathogen](http://www.vim.org/scripts/script.php?script_id=2332)-friendly format.
+This is a minor fork of the original, modified to center matches in the window 
+and open folds if necessary. <bobroski@gmail.com>
 
 [See the plugin page at vim.org.](http://www.vim.org/scripts/script.php?script_id=1682)
 
